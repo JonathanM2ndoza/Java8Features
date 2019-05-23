@@ -17,7 +17,7 @@ public class Application {
         System.out.println(Vehicle.getHorsePower(2500, 480));
 
         System.out.println("===================================");
-        
+
         Vehicle vehicle = new MultiAlarmCar("Audi");
         System.out.println(vehicle.getBrand());
         System.out.println(vehicle.speedUp());

@@ -15,12 +15,12 @@ public class MultiAlarmCar implements Vehicle, Alarm {
 
     @Override
     public String speedUp() {
-        return "The motorbike is speeding up.";
+        return "The MultiAlarmCar is speeding up.";
     }
 
     @Override
     public String slowDown() {
-        return "The mootorbike is slowing down.";
+        return "The MultiAlarmCar  is slowing down.";
     }
 
     @Override
