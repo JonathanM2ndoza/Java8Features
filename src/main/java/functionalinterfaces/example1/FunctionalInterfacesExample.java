@@ -13,5 +13,9 @@ public class FunctionalInterfacesExample {
     public static void main(String[] args) {
         Sayable sayable = (msg) -> System.out.println(msg);
         sayable.say("Say something ..");
+        sayable.doSomeMoreWork1();
+        sayable.doSomeMoreWork2();
+
+        System.out.println(Sayable.getMessage("Test FunctionalInterfaces"));
     }
 }
