@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jmendoza.java8</groupId>
-    <artifactId>Java8Features</artifactId>
+    <artifactId>features</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
