@@ -27,6 +27,7 @@ public class StreamFlatMapExample1 {
                 System.out.println(viaje.getPais());
         }
 
+        System.out.println("========================================");
         //With Java 8 flatMap
         lista.stream().map(persona -> persona.getLista()).flatMap(viajes -> viajes.stream()).map(viaje->viaje.getPais()).forEach(System.out::println);
     }
