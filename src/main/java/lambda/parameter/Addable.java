@@ -1,6 +1,5 @@
-package lambda.summary;
+package lambda.parameter;
 
-@FunctionalInterface
 public interface Addable {
     int add(int a, int b);
 }
