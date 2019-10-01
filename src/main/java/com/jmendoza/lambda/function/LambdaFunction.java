@@ -12,6 +12,7 @@ import java.util.List;
 public class LambdaFunction {
 
     public static void main(String[] args) {
+        
         Task task = list -> {
 
             int sum;
