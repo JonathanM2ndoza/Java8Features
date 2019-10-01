@@ -3,6 +3,11 @@ package com.jmendoza.lambda.anonymous;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Anonymous— We say anonymous because it doesn’t have an explicit name like a method would
+ * normally have: less to write and think about!
+ */
+
 public class LambdaAnonymous {
     public static void main(String[] args) {
 
