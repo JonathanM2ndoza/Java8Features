@@ -21,12 +21,12 @@ public class Predicate2 {
         Predicate2 predicate2 = new Predicate2();
 
         List<Pet> pets = new ArrayList<Pet>();
-        pets.add(new Pet("Noche", 3));
-        pets.add(new Pet("Amber", 8));
+        pets.add(new Pet("Noche", 8));
+        pets.add(new Pet("Amber", 3));
         pets.add(new Pet("Dia", 7));
         List<Pet> result = predicate2.process(pets, (p) -> p.getName().equals("Amber"));
 
-        result.forEach(x -> System.out.println(x.getName()));
+        result.forEach(x -> System.out.println(x));
 
     }
 }
