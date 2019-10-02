@@ -10,6 +10,9 @@ public class Test {
 
         Test tobj = new Test();
         Calculable multiply = (x, y) -> x * y;
-        System.out.println(tobj.operate(5, 7, multiply));
+        System.out.println("Multiply: " + tobj.operate(5, 7, multiply));
+
+        Calculable sum = (x, y) -> x + y;
+        System.out.println("Sum: " + tobj.operate(5, 7, sum));
     }
 }
