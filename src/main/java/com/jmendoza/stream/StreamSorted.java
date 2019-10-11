@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class StreamSorted {
     public static void main(String[] args) {
 
-        List<Pet> pets = new ArrayList<Pet>();
+        List<Pet> pets = new ArrayList<>();
         pets.add(new Pet("Noche", 8));
         pets.add(new Pet("Amber", 3));
         pets.add(new Pet("Dia", 7));
