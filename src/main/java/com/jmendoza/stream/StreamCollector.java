@@ -19,8 +19,7 @@ public class StreamCollector {
         pets.add(new Pet("Adidas", 3));
         pets.add(new Pet("Vagabundo", 9));
 
-        Map<Integer, Long> counting = pets
-                .stream()
+        Map<Integer, Long> counting = pets.stream()
                 .collect(Collectors.groupingBy(Pet::getAge, Collectors.counting()));
 
         System.out.println("Collectors.groupingBy - counting: " + counting);
@@ -45,5 +44,11 @@ public class StreamCollector {
                 );
 
         System.out.println("Collectors.groupingBy - mapping: " + mapping);
+
+        Map<Boolean, List<Pet>> partitioned =
+                pets.stream().collect(Collectors.partitioningBy(p -> p.getAge() > 5));
+
+        System.out.println("Collectors.partitioningBy: " + partitioned);
+
     }
 }
