@@ -50,5 +50,13 @@ public class StreamCollector {
 
         System.out.println("Collectors.partitioningBy: " + partitioned);
 
+        Map<Boolean, Map<Integer, Long>> partitioned2 =
+                pets.stream().collect(
+                        Collectors.partitioningBy(p -> p.getAge() > 5, Collectors.groupingBy(Pet::getAge, Collectors.counting()))
+
+                );
+
+        System.out.println("Collectors.partitioningBy and groupingBy: " + partitioned2);
+
     }
 }
