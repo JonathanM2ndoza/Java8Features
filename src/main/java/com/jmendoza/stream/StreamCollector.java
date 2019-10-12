@@ -66,5 +66,10 @@ public class StreamCollector {
 
         System.out.println("Collectors.partitioningBy and partitioningBy: " + partitioned3);
 
+        String string = pets.stream()
+                .map(Pet::getName)
+                .collect(Collectors.joining(", ", "(", ")"));
+
+        System.out.println("Collectors.joining: " + string);
     }
 }
