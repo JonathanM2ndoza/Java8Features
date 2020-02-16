@@ -10,7 +10,7 @@ public class Predicate1 {
         Predicate<Pet> greaterThan = pet -> pet.getAge() > 4;
         Predicate<Pet> lowerThan = pet -> pet.getAge() < 10;
 
-        boolean result = greaterThan.and(lowerThan).test(new Pet("Amber", 3));
+        boolean result = greaterThan.and(lowerThan).test(new Pet("Amber", 5));
         System.out.println(result);
     }
 }

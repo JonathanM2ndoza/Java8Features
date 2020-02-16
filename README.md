@@ -1,5 +1,5 @@
 # Java8Features
-Review new features Java 8
+Examples of new features Java 8
 
 ## Functional Interfaces
 
@@ -33,7 +33,30 @@ Examples:
 ### Function
 It represents a function that accepts one argument and returns a result.
 
+Examples:
+
 ![Screenshot](prtsc/Function-1.png)
+
+### Predicate
+A Predicate is one such function accepting a single argument to evaluate to a boolean result.
+
+Examples:
+
+![Screenshot](prtsc/Predicate-1.png)
+
+![Screenshot](prtsc/Predicate-1.1.png)
+
+![Screenshot](prtsc/Predicate-1.2.png)
+
+### Supplier
+Represents a supplier of results.
+
+Examples:
+
+![Screenshot](prtsc/Supplier-1.png)
+
+
+
 
 
 
