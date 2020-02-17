@@ -55,6 +55,21 @@ Examples:
 
 ![Screenshot](prtsc/Supplier-1.png)
 
+## Lambda Expressions
+
+### Lambda anonymous
+
+Anonymous— We say anonymous because it doesn’t have an explicit name like a method would
+normally have: less to write and think about!
+
+![Screenshot](prtsc/Lambda-1.png)
+
+![Screenshot](prtsc/Lambda-1.1.png)
+
+
+
+
+
 
 
 
