@@ -22,6 +22,7 @@ public class Printer {
 
         printer.print(printing);
         printer.print(innerClassPrinting);
-        printer.print(()->System.out.println("Hello World with Lambda 2"));
+        //Type Inference
+        printer.print(() -> System.out.println("Hello World with Lambda 2"));
     }
 }
