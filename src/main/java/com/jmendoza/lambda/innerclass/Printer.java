@@ -13,7 +13,7 @@ public class Printer {
         Printing printing = () -> System.out.println("Hello World with Lambda");
 
         // Interface Implementations
-        Printing innerClassprinting = new Printing() {
+        Printing innerClassPrinting = new Printing() {
             @Override
             public void execute() {
                 System.out.println("Hello World with Inner Class");
@@ -21,6 +21,6 @@ public class Printer {
         };
 
         printer.print(printing);
-        printer.print(innerClassprinting);
+        printer.print(innerClassPrinting);
     }
 }
