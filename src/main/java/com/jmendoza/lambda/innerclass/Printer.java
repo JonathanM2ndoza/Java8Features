@@ -24,5 +24,9 @@ public class Printer {
         printer.print(innerClassPrinting);
         //Type Inference
         printer.print(() -> System.out.println("Hello World with Lambda 2"));
+
+        //Default Methods
+        printing.show();
+        printing.clear();
     }
 }
