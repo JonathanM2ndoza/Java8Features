@@ -6,6 +6,38 @@ Examples of new features Java 8
 - Streams
 - Method References and Collections
 
+## Lambdas
+
+### Lambda Anonymous
+
+Anonymous— We say anonymous because it doesn’t have an explicit name like a method would
+normally have: less to write and think about!
+
+![Screenshot](prtsc/Lambda-1.png)
+
+![Screenshot](prtsc/Lambda-1.1.png)
+
+### Lambda Function
+
+Function— We say function because a lambda isn’t associated with a particular class like a method is.
+But like a method, a lambda has a list of parameters, a body, a return type, and a possible list of exceptions that can be thrown.
+
+![Screenshot](prtsc/Lambda-2.png)
+
+![Screenshot](prtsc/Lambda-2.1.png)
+
+### Lambda Parameters
+
+A lambda expression can have zero or any number of arguments. 
+
+![Screenshot](prtsc/Lambda-3.png)
+
+![Screenshot](prtsc/Lambda-3.1.png)
+
+![Screenshot](prtsc/Lambda-3.2.png)
+
+![Screenshot](prtsc/Lambda-3.3.png)
+
 ## Functional Interfaces
 
 ### BiConsumer
@@ -59,37 +91,4 @@ Represents a supplier of results.
 Examples:
 
 ![Screenshot](prtsc/Supplier-1.png)
-
-## Lambda Expressions
-
-### Lambda Anonymous
-
-Anonymous— We say anonymous because it doesn’t have an explicit name like a method would
-normally have: less to write and think about!
-
-![Screenshot](prtsc/Lambda-1.png)
-
-![Screenshot](prtsc/Lambda-1.1.png)
-
-### Lambda Function
-
-Function— We say function because a lambda isn’t associated with a particular class like a method is.
-But like a method, a lambda has a list of parameters, a body, a return type, and a possible list of exceptions that can be thrown.
-
-![Screenshot](prtsc/Lambda-2.png)
-
-![Screenshot](prtsc/Lambda-2.1.png)
-
-### Lambda Parameters
-
-A lambda expression can have zero or any number of arguments. 
-
-![Screenshot](prtsc/Lambda-3.png)
-
-![Screenshot](prtsc/Lambda-3.1.png)
-
-![Screenshot](prtsc/Lambda-3.2.png)
-
-![Screenshot](prtsc/Lambda-3.3.png)
-
 
