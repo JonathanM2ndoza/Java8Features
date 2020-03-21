@@ -3,16 +3,15 @@ package com.jmendoza.lambda.other;
 public class Test {
 
     private int operate(int a, int b, Calculable calculable) {
+
         return calculable.operation(a, b);
     }
 
     public static void main(String[] args) {
 
-        Test tobj = new Test();
-        Calculable multiply = (x, y) -> x * y;
-        System.out.println("Multiply: " + tobj.operate(5, 7, multiply));
+        Test test = new Test();
+        System.out.println("Multiply: " + test.operate(5, 7, (x, y) -> x * y));
 
-        Calculable sum = (x, y) -> x + y;
-        System.out.println("Sum: " + tobj.operate(5, 7, sum));
+        System.out.println("Sum: " + test.operate(5, 7, (x, y) -> x + y));
     }
 }
