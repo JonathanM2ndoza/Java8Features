@@ -1,6 +1,11 @@
 # Java8Features
 Examples of new features Java 8
 
+- Lambdas
+- Functional interfaces
+- Streams
+- Method References and Collections
+
 ## Functional Interfaces
 
 ### BiConsumer
