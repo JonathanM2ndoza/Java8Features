@@ -26,7 +26,11 @@ public class Test {
                 new User("agil", 4)
         );
         System.out.println(userList.toString());
+
+        //Lambda
         //Collections.sort(userList,(p1,p2)->p1.getUserName().compareTo(p2.getUserName()));
+
+        //Method References
         Collections.sort(userList, Comparator.comparing(User::getUserName));
         System.out.println(userList.toString());
     }
