@@ -2,7 +2,7 @@ package com.jmendoza.stream;
 
 import com.jmendoza.functionalinterfaces.model.Pet;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -11,13 +11,13 @@ import java.util.stream.Collectors;
 public class StreamCollector {
     public static void main(String[] args) {
 
-        List<Pet> pets = new ArrayList<>();
-        pets.add(new Pet("Noche", 8));
-        pets.add(new Pet("Amber", 3));
-        pets.add(new Pet("Dia", 8));
-        pets.add(new Pet("Kira", 5));
-        pets.add(new Pet("Adidas", 3));
-        pets.add(new Pet("Vagabundo", 9));
+        List<Pet> pets = Arrays.asList(
+                new Pet("Noche", 8),
+                new Pet("Amber", 3),
+                new Pet("Dia", 8),
+                new Pet("Kira", 5),
+                new Pet("Adidas", 3),
+                new Pet("Vagabundo", 9));
 
         Map<Integer, Long> counting = pets.stream()
                 .collect(Collectors.groupingBy(Pet::getAge, Collectors.counting()));
