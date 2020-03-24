@@ -1,5 +1,7 @@
 package com.jmendoza.generics;
 
+import java.util.Arrays;
+
 /**
  * E – Element (used extensively by the Java Collections Framework, for example ArrayList, Set etc.)
  * K – Key (Used in Map)
@@ -23,5 +25,8 @@ public class GenericRunner {
 
         System.out.println(stringCustomList.get(0));
         System.out.println(integerCustomList.get(1));
+
+        System.out.println("==============================");
+        System.out.println(Calculator.add(Arrays.asList(4, 5, 6, 7), Integer::sum));
     }
 }
