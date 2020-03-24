@@ -31,6 +31,7 @@ public class StreamFlatMap {
         User user1 = new User("amendoza", 2);
         List<Role> roleList1 = new ArrayList<>();
         roleList1.add(role3);
+        roleList1.add(role2);
         user1.setRoleList(roleList1);
 
         List<User> userList = new ArrayList<>();
@@ -41,6 +42,7 @@ public class StreamFlatMap {
                 .map(u -> u.getRoleList())
                 .flatMap(r -> r.stream())
                 .map(x -> x.getRoleName())
+                .distinct()
                 .collect(Collectors.toList());
 
         System.out.println("Role List: " + roles);
