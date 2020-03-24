@@ -55,5 +55,8 @@ public class StreamFlatMap {
                 .collect(Collectors.toList());
 
         System.out.println("Role List UpperCase : " + roles1);
+
+        List<User> userListTemp = userList.stream().collect(Collectors.toList());
+        userListTemp.forEach(System.out::println);
     }
 }
