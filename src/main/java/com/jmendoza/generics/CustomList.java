@@ -3,20 +3,24 @@ package com.jmendoza.generics;
 import java.util.ArrayList;
 
 public class CustomList<T> {
-    private ArrayList<T> arrayList = new ArrayList();
+    private ArrayList<T> list = new ArrayList();
 
     public void add(T t) {
-        arrayList.add(t);
+        list.add(t);
     }
 
     public void remove(T t) {
-        arrayList.remove(t);
+        list.remove(t);
+    }
+
+    public T get(int index) {
+        return list.get(index);
     }
 
     @Override
     public String toString() {
         return "CustomList{" +
-                "arrayList=" + arrayList +
+                "list=" + list +
                 '}';
     }
 }
