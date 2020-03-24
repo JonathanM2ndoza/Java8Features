@@ -8,7 +8,7 @@ package com.jmendoza.generics;
  * T – Type
  * S,U,V etc. – 2nd, 3rd, 4th types
  */
-public class RunList {
+public class GenericRunner {
     public static void main(String[] args) {
 
         CustomList<String> stringCustomList = new CustomList<>();
