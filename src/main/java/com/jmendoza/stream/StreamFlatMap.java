@@ -39,18 +39,18 @@ public class StreamFlatMap {
         userList.add(user1);
 
         List<String> roles = userList.stream()
-                .map(u -> u.getRoleList())
-                .flatMap(r -> r.stream())
-                .map(x -> x.getRoleName())
+                .map(User::getRoleList)
+                .flatMap(List::stream)
+                .map(Role::getRoleName)
                 .distinct()
                 .collect(Collectors.toList());
 
         System.out.println("Role List: " + roles);
 
         List<String> roles1 = userList.stream()
-                .map(u -> u.getRoleList())
-                .flatMap(r -> r.stream())
-                .map(x -> x.getRoleName())
+                .map(User::getRoleList)
+                .flatMap(List::stream)
+                .map(Role::getRoleName)
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
 
