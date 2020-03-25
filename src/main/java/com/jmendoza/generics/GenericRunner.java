@@ -64,7 +64,12 @@ public class GenericRunner {
         list.forEach(System.out::println);
     }
 
-    //Upper Bounded Wildcards
+    /**
+     * Upper Bounded Wildcards
+     *
+     * You keep the code open for extension to support any new types
+     * getting added to the type hierarchy
+     */
     static double add(List<? extends Number> numbers) {
         double sum = 0.0;
         for (Number number : numbers) {
@@ -73,7 +78,12 @@ public class GenericRunner {
         return sum;
     }
 
-    //Lower Bounded Wildcards
+    /**
+     * Lower Bounded Wildcards
+     *
+     * You close the code to support any new types in the hierarchy
+     * and restrict to the types currently present
+     */
     static void addValues(List<? super Integer> numbers) {
         numbers.add(1);
         numbers.add(2);
