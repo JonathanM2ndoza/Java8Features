@@ -17,6 +17,10 @@ public class CustomList<T> {
         return list.get(index);
     }
 
+    public ArrayList<T> getList() {
+        return list;
+    }
+
     @Override
     public String toString() {
         return "CustomList{" +
