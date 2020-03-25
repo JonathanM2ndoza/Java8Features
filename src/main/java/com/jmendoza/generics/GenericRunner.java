@@ -45,12 +45,12 @@ public class GenericRunner {
         System.out.println(list);
 
         System.out.println("============= Generic Methods (unionSet) ========================");
-        Set<String> set1 = new HashSet<String>();
+        Set<String> set1 = new HashSet<>();
         set1.add("first");
         set1.add("second");
         set1.add("third");
 
-        Set<String> set2 = new HashSet<String>();
+        Set<String> set2 = new HashSet<>();
         set2.add("first");
         set2.add("second");
         set2.add("computer");
@@ -83,7 +83,7 @@ public class GenericRunner {
 
     //Generic Methods
     public static <E> Set<E> unionSet(Set<E> set1, Set<E> set2) {
-        Set<E> result = new HashSet<E>(set1);
+        Set<E> result = new HashSet<>(set1);
         result.addAll(set2);
         return result;
     }
