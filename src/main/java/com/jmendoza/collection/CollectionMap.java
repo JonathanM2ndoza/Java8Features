@@ -1,6 +1,7 @@
 package com.jmendoza.collection;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 public class CollectionMap {
@@ -63,9 +64,44 @@ public class CollectionMap {
         map.compute(1, (k, v) -> v.concat(" Mendoza"));
         map.compute(2, (k, v) -> v.concat(" Gil"));
         map.compute(7, (k, v) -> null);
-        map.compute(10, (k, v) -> "Angel");
+        map.compute(10, (k, v) -> "Angel"); //Add Element
         System.out.println(map);
 
+        System.out.println("=================== computeIfPresent ======================");
+        map.computeIfPresent(1, (k, v) -> v.concat(" Mendoza Gil"));
+        map.computeIfPresent(11, (k, v) -> "Pancho"); // Not add element
+        System.out.println(map);
 
+        System.out.println("=================== computeIfAbsent ======================");
+        Map<String, Collection<String>> stringCollectionMap = new HashMap<>();
+        stringCollectionMap.computeIfAbsent("names", k -> new ArrayList<>()).add("Amber");
+        stringCollectionMap.computeIfAbsent("names", k -> new ArrayList<>()).add("Noche");
+        stringCollectionMap.computeIfAbsent("fruits", k -> new ArrayList<>()).add("Apple");
+        stringCollectionMap.computeIfAbsent("fruits", k -> new ArrayList<>()).add("Banana");
+        System.out.println(stringCollectionMap);
+
+        System.out.println("=================== merge ======================");
+        Map<String, Integer> prices = new LinkedHashMap<>();
+        System.out.println("Prices map: " + prices);
+
+        prices.merge("fruits", 3, Integer::sum);
+        prices.merge("fruits", 5, Integer::sum);
+        prices.merge("fruits", 2, Integer::sum);
+        System.out.println("Prices map: " + prices);
+
+        prices.merge("Bread", 42, Integer::sum);
+        prices.merge("Bread", 10, Integer::sum);
+        System.out.println("Prices map: " + prices);
+
+        System.out.println("=================== ConcurrentHashMap ======================");
+        ConcurrentHashMap<Integer, String> concurrentHashMap = new ConcurrentHashMap<>();
+
+        for (int i = 1; i < 101; i++) {
+            concurrentHashMap.put(i, "pet-" + i);
+        }
+        concurrentHashMap.forEach(3, (key, val) -> {
+            System.out.println("Thread: " + Thread.currentThread().getName());
+            System.out.println("key: " + key + "\t" + "val: " + val);
+        });
     }
 }
