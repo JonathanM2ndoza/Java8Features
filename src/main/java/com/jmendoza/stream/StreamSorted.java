@@ -20,7 +20,7 @@ public class StreamSorted {
 
         //Sort by String
         List<Pet> pets1 = pets.stream()
-                .sorted(Comparator.comparing(p -> p.getName()))
+                .sorted(Comparator.comparing(Pet::getName))
                 .collect(Collectors.toList());
 
         System.out.println("List pets after by Name: " + pets1);
@@ -44,7 +44,7 @@ public class StreamSorted {
 
         //Sort by String and nullsLast
         List<Pet> pets4 = pets.stream()
-                .sorted(Comparator.comparing(p -> p.getName(), Comparator.nullsLast(String::compareTo)))
+                .sorted(Comparator.comparing(Pet::getName, Comparator.nullsLast(String::compareTo)))
                 .collect(Collectors.toList());
 
         System.out.println("List pets after by Name - nullsLast: " + pets4);
