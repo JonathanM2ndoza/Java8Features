@@ -10,10 +10,10 @@ public interface Printing {
 
     default void show(){
         System.out.println("FunctionalInterface - default method show()");
-    };
+    }
 
     default void clear(){
         System.out.println("FunctionalInterface - default method clear()");
-    };
+    }
 
 }
