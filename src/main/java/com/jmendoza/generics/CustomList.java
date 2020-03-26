@@ -1,6 +1,7 @@
 package com.jmendoza.generics;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomList<T> {
     private ArrayList<T> list = new ArrayList();
@@ -17,7 +18,7 @@ public class CustomList<T> {
         return list.get(index);
     }
 
-    public ArrayList<T> getList() {
+    public List<T> getList() {
         return list;
     }
 
