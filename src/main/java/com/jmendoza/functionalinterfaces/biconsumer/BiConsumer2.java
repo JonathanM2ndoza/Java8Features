@@ -32,9 +32,9 @@ public class BiConsumer2 {
         };
 
         BiConsumer<List<Pet>, List<Pet>> display = (petList1, petList2) -> {
-            petList1.stream().forEach(x -> System.out.println(x));
+            petList1.stream().forEach(System.out::println);
             System.out.println("================================");
-            petList2.stream().forEach(x -> System.out.println(x));
+            petList2.stream().forEach(System.out::println);
         };
 
         compare.andThen(display).accept(pets1, pets2);

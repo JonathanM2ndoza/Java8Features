@@ -19,9 +19,9 @@ public class BiConsumer1 {
         pets2.add(new Pet("Gaviota", 10));
 
         BiConsumer<List<Pet>, List<Pet>> consumer = (petList1, petList2) -> {
-            petList1.stream().forEach(x -> System.out.println(x));
+            petList1.stream().forEach(System.out::println);
             System.out.println("================================");
-            petList2.stream().forEach(x -> System.out.println(x));
+            petList2.stream().forEach(System.out::println);
         };
 
         consumer.accept(pets1, pets2);

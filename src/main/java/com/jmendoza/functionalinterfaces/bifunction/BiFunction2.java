@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 
 public class BiFunction2 {
     public static void main(String[] args) {
-        BiFunction<String, Integer, Pet> operation = (name, age) -> new Pet(name, age);
+        BiFunction<String, Integer, Pet> operation = Pet::new;
         System.out.println(operation.apply("Amber", 3));
     }
 }

@@ -9,12 +9,12 @@ import java.util.function.Consumer;
 public class Consumer1 {
     public static void main(String[] args) {
 
-        List<Pet> pets = new ArrayList<Pet>();
+        List<Pet> pets = new ArrayList<>();
         pets.add(new Pet("Noche", 8));
         pets.add(new Pet("Amber", 3));
         pets.add(new Pet("Dia", 7));
 
-        Consumer<List<Pet>> consumer = petList -> petList.stream().forEach(x -> System.out.println(x));
+        Consumer<List<Pet>> consumer = petList -> petList.stream().forEach(System.out::println);
         consumer.accept(pets);
     }
 }

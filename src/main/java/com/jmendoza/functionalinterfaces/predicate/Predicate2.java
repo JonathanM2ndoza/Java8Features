@@ -9,7 +9,7 @@ import java.util.function.Predicate;
 public class Predicate2 {
 
     public List<Pet> process(List<Pet> pets, Predicate<Pet> predicate) {
-        List<Pet> result = new ArrayList<Pet>();
+        List<Pet> result = new ArrayList<>();
         for (Pet pet : pets)
             if (predicate.test(pet))
                 result.add(pet);
@@ -20,13 +20,13 @@ public class Predicate2 {
 
         Predicate2 predicate2 = new Predicate2();
 
-        List<Pet> pets = new ArrayList<Pet>();
+        List<Pet> pets = new ArrayList<>();
         pets.add(new Pet("Noche", 8));
         pets.add(new Pet("Amber", 3));
         pets.add(new Pet("Dia", 7));
-        List<Pet> result = predicate2.process(pets, (p) -> p.getName().equals("Amber"));
+        List<Pet> result = predicate2.process(pets, p -> p.getName().equals("Amber"));
 
-        result.forEach(x -> System.out.println(x));
+        result.forEach(System.out::println);
 
     }
 }
