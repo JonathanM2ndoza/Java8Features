@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class CollectionRunner {
+public class CollectionList {
     public static void main(String[] args) {
 
         List<Staff> staffList = new ArrayList<>();
@@ -15,6 +15,7 @@ public class CollectionRunner {
         staffList.add(new Staff("Jose", 9000.00, "HR"));
         staffList.add(new Staff("Pepe", 7000.00, "IT"));
 
+        System.out.println("=================== Collection: List ================");
         System.out.println("=================== forEach =========================");
         staffList.forEach(System.out::println);
 
@@ -27,7 +28,7 @@ public class CollectionRunner {
         staffList.forEach(System.out::println);
 
         System.out.println("=================== replaceAll =========================");
-        staffList.replaceAll(CollectionRunner::salaryIncrease);
+        staffList.replaceAll(CollectionList::salaryIncrease);
         staffList.forEach(System.out::println);
     }
 
