@@ -1,8 +1,43 @@
 # Java8Features
-![Screenshot](prtsc/java-oracle.png)
 
+##Java Development Kit (JDK) 8 | Java Platform, Standard Edition (Java SE) 8
 
-Examples of new features Java 8
+![Screenshot](prtsc/Java8-jdk.png)
+
+- Java Programming Language
+
+    - Lambda Expressions, a new language feature, has been introduced in this release. They enable you to treat functionality as a method argument, or code as data. Lambda expressions let you express instances of single-method interfaces (referred to as functional interfaces) more compactly.
+
+    - Method references provide easy-to-read lambda expressions for methods that already have a name.
+
+    - Default methods enable new functionality to be added to the interfaces of libraries and ensure binary compatibility with code written for older versions of those interfaces.
+
+    - Repeating Annotations provide the ability to apply the same annotation type more than once to the same declaration or type use.
+
+    - Type Annotations provide the ability to apply an annotation anywhere a type is used, not just on a declaration. Used with a pluggable type system, this feature enables improved type checking of your code.
+
+    - Improved type inference.
+
+    - Method parameter reflection.
+    
+ Reference: https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html
+
+##Programming languages ecosystem and climate change
+
+![Screenshot](prtsc/Java8-Programming-languages-ecosystem.png)
+
+The main benefit of Java 8 to a programmer is that it provides more programming tools and
+concepts to solve new or existing programming problems more quickly or, more importantly, in
+a more concise, more easily maintainable way. Although the concepts are new to Java, they’ve
+proved powerful in niche research-like languages. We highlight and develop the ideas behind
+three such programming concepts that have driven the development of the Java 8 features to
+exploit parallelism and write more concise code in general.
+
+Reference: Book, Java 8 in Action: Lambdas, streams, and
+           functional-style programming
+           Raoul-Gabriel Urma, Mario Fusco, and Alan Mycroft
+
+###Examples of new features Java 8
 
 - Lambdas
 - Functional interfaces
@@ -10,90 +45,4 @@ Examples of new features Java 8
 - Collections
 - Generics Wildcard
 - Concurrency
-
-## Lambdas
-
-### Lambda Anonymous
-
-Anonymous— We say anonymous because it doesn’t have an explicit name like a method would
-normally have: less to write and think about!
-
-![Screenshot](prtsc/Lambda-1.png)
-
-![Screenshot](prtsc/Lambda-1.1.png)
-
-### Lambda Function
-
-Function— We say function because a lambda isn’t associated with a particular class like a method is.
-But like a method, a lambda has a list of parameters, a body, a return type, and a possible list of exceptions that can be thrown.
-
-![Screenshot](prtsc/Lambda-2.png)
-
-![Screenshot](prtsc/Lambda-2.1.png)
-
-### Lambda Parameters
-
-A lambda expression can have zero or any number of arguments. 
-
-![Screenshot](prtsc/Lambda-3.png)
-
-![Screenshot](prtsc/Lambda-3.1.png)
-
-![Screenshot](prtsc/Lambda-3.2.png)
-
-![Screenshot](prtsc/Lambda-3.3.png)
-
-## Functional Interfaces
-
-### BiConsumer
-It represents an operation that accepts two input arguments and returns no result.
-
-Examples:
-
-![Screenshot](prtsc/BiConsumer-1.png)
-
-![Screenshot](prtsc/BiConsumer-1.1.png)
-
-![Screenshot](prtsc/BiConsumer-1.2.png)
-
-### BiFunction
-It represents a function that accepts two arguments and returns a result.
-
-Examples:
-
-![Screenshot](prtsc/BiFunction-1.png)
-
-![Screenshot](prtsc/BiFunction-1.1.png)
-
-### Consumer
-It represents an operation that accepts a single argument and returns no result.
-
-Examples:
-
-![Screenshot](prtsc/Consumer-1.png)
-
-### Function
-It represents a function that accepts one argument and returns a result.
-
-Examples:
-
-![Screenshot](prtsc/Function-1.png)
-
-### Predicate
-A Predicate is one such function accepting a single argument to evaluate to a boolean result.
-
-Examples:
-
-![Screenshot](prtsc/Predicate-1.png)
-
-![Screenshot](prtsc/Predicate-1.1.png)
-
-![Screenshot](prtsc/Predicate-1.2.png)
-
-### Supplier
-Represents a supplier of results.
-
-Examples:
-
-![Screenshot](prtsc/Supplier-1.png)
 
