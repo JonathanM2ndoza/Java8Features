@@ -14,7 +14,7 @@ public class CollectionMap {
         map.put(4, "Kira");
         map.put(5, "Dia");
 
-        System.out.println("=================== Collection: Map =================");
+        System.out.println("=================== Interface: Map =================");
         System.out.println("=================== getOrDefault ====================");
         System.out.println(map.getOrDefault(2, "Thor"));
         System.out.println(map.getOrDefault(5, "Thor"));
@@ -103,5 +103,22 @@ public class CollectionMap {
             System.out.println("Thread: " + Thread.currentThread().getName());
             System.out.println("key: " + key + "\t" + "val: " + val);
         });
+
+        System.out.println("=================== ConcurrentHashMap - reduce==============");
+        ConcurrentHashMap<String, String> concurrentHashMap2 = new ConcurrentHashMap<>();
+        concurrentHashMap2.put("Manuel", "Peru");
+        concurrentHashMap2.put("George", "US");
+        concurrentHashMap2.put("Cris", "Chile");
+        concurrentHashMap2.put("Gustavo", "Argentina");
+        System.out.println(concurrentHashMap2);
+
+        String reduce = concurrentHashMap2.reduce(2, (k, v) -> k + "-" + v, (r1, r2) -> r1 + "," + r2);
+        System.out.println(reduce);
+
+        String reduceKeys = concurrentHashMap2.reduceKeys(2, (k1, k2) -> k1 + "," + k2);
+        System.out.println(reduceKeys);
+
+        String reduceValues = concurrentHashMap2.reduceValues(2, (v1, v2) -> v1 + "," + v2);
+        System.out.println(reduceValues);
     }
 }
