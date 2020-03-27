@@ -1,13 +1,15 @@
 # Java8Features
-Examples of new features Java 8
-
 ![Screenshot](prtsc/java-oracle.png)
+
+
+Examples of new features Java 8
 
 - Lambdas
 - Functional interfaces
 - Streams and Method References
 - Collections
 - Generics Wildcard
+- Concurrency
 
 ## Lambdas
 
