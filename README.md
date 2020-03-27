@@ -1,6 +1,6 @@
 # Java8Features
 
-##Java Development Kit (JDK) 8 | Java Platform, Standard Edition (Java SE) 8
+## Java Development Kit (JDK) 8 | Java Platform, Standard Edition (Java SE) 8
 
 ![Screenshot](prtsc/Java8-jdk.png)
 
@@ -22,7 +22,7 @@
     
  Reference: https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html
 
-##Programming languages ecosystem and climate change
+## Programming languages ecosystem and climate change
 
 ![Screenshot](prtsc/Java8-Programming-languages-ecosystem.png)
 
@@ -37,7 +37,7 @@ Reference: Book, Java 8 in Action: Lambdas, streams, and
            functional-style programming
            Raoul-Gabriel Urma, Mario Fusco, and Alan Mycroft
 
-###Examples of new features Java 8
+### Examples of new features Java 8
 
 - Lambdas
 - Functional interfaces
