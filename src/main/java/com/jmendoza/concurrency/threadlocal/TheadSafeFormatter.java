@@ -7,5 +7,5 @@ import java.text.SimpleDateFormat;
  */
 public class TheadSafeFormatter {
     public static final ThreadLocal<SimpleDateFormat> simpleDateFormatThreadLocal = ThreadLocal.withInitial(
-            () -> new SimpleDateFormat("dd-MM-yyyy"));
+            () -> new SimpleDateFormat("dd-MM-yyyy HH:mm:ss"));
 }
