@@ -1,6 +1,5 @@
 package com.jmendoza.concurrency.threadlocal;
 
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
@@ -11,9 +10,9 @@ public class ThreadLocalSafeFormatterTest {
     // 10 Threads
     private static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
-        // 1000 Task
+        // 10 Task
         for (int i = 0; i < 10; i++) {
             int id = i;
             executorService.submit(() -> {
