@@ -12,8 +12,8 @@ public class ThreadLocalSafeFormatterTest {
 
     public static void main(String[] args) {
 
-        // 10 Task
-        for (int i = 0; i < 10; i++) {
+        // 1000 Task
+        for (int i = 0; i < 1000; i++) {
             int id = i;
             executorService.submit(() -> {
                 System.out.println("Thread: " + Thread.currentThread().getName());
