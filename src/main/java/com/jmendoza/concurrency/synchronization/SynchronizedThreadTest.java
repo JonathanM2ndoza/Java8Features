@@ -20,7 +20,7 @@ public class SynchronizedThreadTest {
                 SynchronizedThread synchronizedThread1 = new SynchronizedThread();
                 synchronizedThread1.setFlag(synchronizedData);
                 synchronizedThread1.start();
-                Thread.sleep(1);
+                Thread.sleep(100);
                 synchronizedThread1.shutdown();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
