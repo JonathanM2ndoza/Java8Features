@@ -2,6 +2,7 @@ package com.jmendoza.concurrency.visibility;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class VolatileVisibilityTest {
 
@@ -11,8 +12,7 @@ public class VolatileVisibilityTest {
 
         executorService.submit(() -> {
             try {
-                VolatileData volatileData = new VolatileData();
-                volatileData.setFlag(true);
+                VolatileData volatileData = new VolatileData(true, new AtomicInteger(0));
                 VolatileVisibility volatileVisibility = new VolatileVisibility();
                 volatileVisibility.setFlag(volatileData);
                 volatileVisibility.start();
