@@ -1,6 +1,6 @@
 # Java8Features
 
-## Java Development Kit (JDK) 8 | Java Platform, Standard Edition (Java SE) 8
+## Java Development Kit (JDK) 8 | Java Platform, Standard Edition (Java SE) 8 | Long-Term-Support (LTS)
 
 ![Screenshot](prtsc/Java8-jdk.png)
 
