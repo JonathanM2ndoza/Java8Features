@@ -30,7 +30,7 @@ public class ExecutorServiceTypePools {
 
         scheduledExecutorService.schedule(new CpuTask("CpuTaskSchule"), 5, TimeUnit.SECONDS);
 
-        
+
 
         scheduledExecutorService.shutdown();
     }
