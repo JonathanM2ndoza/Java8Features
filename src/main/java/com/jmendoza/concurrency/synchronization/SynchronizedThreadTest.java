@@ -23,8 +23,8 @@ public class SynchronizedThreadTest {
                 Thread.sleep(100);
                 synchronizedThread1.shutdown();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         });
 

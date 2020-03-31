@@ -23,8 +23,8 @@ public class VolatileVisibilityTest {
                 Thread.sleep(100);
                 volatileVisibility2.shutdown();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         });
 

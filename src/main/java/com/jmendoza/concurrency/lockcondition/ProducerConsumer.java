@@ -9,17 +9,16 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ProducerConsumer {
 
-    private static final int CAPACITY = 10;
-    private final Queue queue = new LinkedList<>();
-    private final Random random = new Random();
+    private static final int CAPACITY = 7;
+    private Queue queue = new LinkedList<>();
+    private Random random = new Random();
 
-    private final Lock lock = new ReentrantLock();
-    private final Condition bufferNotFull = lock.newCondition();
-    private final Condition bufferFull = lock.newCondition();
+    private Lock lock = new ReentrantLock();
+    private Condition bufferNotFull = lock.newCondition();
+    private Condition bufferFull = lock.newCondition();
 
-    public void put() throws InterruptedException {
+    public void add() throws InterruptedException {
         lock.lock();
-
         try {
             while (queue.size() == CAPACITY) {
                 System.out.println(Thread.currentThread().getName() + " : Buffer is full, waiting");
@@ -41,9 +40,8 @@ public class ProducerConsumer {
 
     public void get() throws InterruptedException {
         lock.lock();
-
         try {
-            while (queue.size() == 0) {
+            while (queue.isEmpty()) {
                 System.out.println(Thread.currentThread().getName() + " : Buffer is empty, waiting");
                 bufferNotFull.await();
             }
