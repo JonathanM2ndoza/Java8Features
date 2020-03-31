@@ -11,12 +11,13 @@ import java.util.concurrent.Executors;
 public class ExecutorServiceTest {
     public static void main(String[] args) {
 
+        System.out.println("==================newFixedThreadPool==================");
         int coreCount = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(coreCount);
         System.out.println("Available Processors: " + coreCount);
 
         for (int i = 0; i < 20; i++) {
-            executorService.execute(new CpuTask("CpuTask-" + i));
+            executorService.execute(new CpuTask("CpuTaskFixed-" + i));
         }
         executorService.shutdown();
     }
