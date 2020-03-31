@@ -4,8 +4,8 @@ public class Producer extends Thread {
 
     private ProducerConsumer producerConsumer;
 
-    public Producer(ProducerConsumer producerConsumer) {
-        super("PRODUCER");
+    public Producer(ProducerConsumer producerConsumer, String name) {
+        super(name);
         this.producerConsumer = producerConsumer;
     }
 
