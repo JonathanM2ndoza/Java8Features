@@ -10,7 +10,7 @@ public class ProducerConsumerTest {
     public static void main(String[] args) {
         ProducerConsumer producerConsumer = new ProducerConsumer();
         executorService.execute(() -> {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 1000; i++) {
                 Producer producer = new Producer(producerConsumer, "PRODUCER: " + i);
                 Consumer consumer = new Consumer(producerConsumer, "CONSUMER: " + i);
 
