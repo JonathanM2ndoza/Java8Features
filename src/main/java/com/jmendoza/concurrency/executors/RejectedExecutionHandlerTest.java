@@ -34,6 +34,5 @@ public class RejectedExecutionHandlerTest {
             //Waiting for the termination of alternateExecutor
         }
         System.out.println("Alternate Execution Completed");
-
     }
 }

@@ -7,13 +7,13 @@ public class RejectedExecutionHandlerTask implements RejectedExecutionHandler {
     @Override
     public void rejectedExecution(Runnable task, ThreadPoolExecutor executor) {
         System.out.println(task.toString() + " is Rejected");
-        System.out.println("Retrying to Execute");
+        System.out.println(task.toString() + " Retrying to Execute");
         try {
             //Re-executing with alternateExecutor
             RejectedExecutionHandlerTest.alternateExecutor.execute(task);
             System.out.println(task.toString() + " Execution Started");
         } catch (Exception e) {
-            System.out.println("Failure to Re-exicute " + e.getMessage());
+            System.out.println("Failure to Re-execute " + e.getMessage());
         }
     }
 }
