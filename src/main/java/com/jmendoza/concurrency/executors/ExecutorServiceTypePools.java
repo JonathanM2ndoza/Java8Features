@@ -1,9 +1,6 @@
 package com.jmendoza.concurrency.executors;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class ExecutorServiceTypePools {
 
@@ -26,11 +23,13 @@ public class ExecutorServiceTypePools {
          * The scheduleAtFixedRate and scheduleWithFixedDelay methods create and execute tasks that run periodically until cancelled.
          */
         System.out.println("==================newScheduledThreadPool==================");
-        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10);
-
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(4);
+        // Task to run after 5 seconds delay
         scheduledExecutorService.schedule(new CpuTask("CpuTaskSchule"), 5, TimeUnit.SECONDS);
-
-
+        // Task to run repeatedly every 6 seconds
+        scheduledExecutorService.scheduleAtFixedRate(new CpuTask("CpuTaskScheduleAtFixedRate"), 10, 6, TimeUnit.SECONDS);
+        // Task to run repeatedly 6 seconds after previous task completes
+        scheduledExecutorService.scheduleWithFixedDelay(new CpuTask("CpuTaskScheduleWithFixedDelay"), 10, 6, TimeUnit.SECONDS);
 
         scheduledExecutorService.shutdown();
     }
