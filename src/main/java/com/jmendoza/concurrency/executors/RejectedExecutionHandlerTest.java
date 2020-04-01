@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class RejectedExecutionHandlerTest {
 
-    public static ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
-    public static ThreadPoolExecutor alternateExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+     public static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+     public static final ThreadPoolExecutor alternateExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
 
     public static void main(String[] args) {
 
