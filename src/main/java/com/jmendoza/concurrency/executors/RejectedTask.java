@@ -8,7 +8,7 @@ public class RejectedTask implements Runnable {
     public RejectedTask(int taskId, String taskName) {
         this.taskId = taskId;
         this.taskName = taskName;
-        System.out.println(taskName + taskId + " Created");
+        System.out.println(taskName.concat(" taskId: ") + taskId + " Created");
     }
 
     @Override
