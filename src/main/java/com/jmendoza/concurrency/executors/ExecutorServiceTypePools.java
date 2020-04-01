@@ -1,10 +1,25 @@
 package com.jmendoza.concurrency.executors;
 
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class ExecutorServiceTypePools {
 
     public static void main(String[] args) throws InterruptedException {
+
+        /**
+         * Creates single thread to execute all tasks. Use it when you have only one task to execute (sequentially).
+         */
+        System.out.println("==================newSingleThreadExecutor==================");
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.submit(() -> System.out.println("Task 1"));
+        executor.submit(() -> System.out.println("Task 2"));
+        executor.submit(() -> System.out.println("Task 3"));
+        executor.shutdown();
+        Thread.sleep(1000);
+
         /**
          * This method creates a thread pool that creates new threads as needed but will reuse previously constructed threads when they are available.
          * These pools will typically improve the performance of programs that execute many short-lived asynchronous tasks.
@@ -28,9 +43,9 @@ public class ExecutorServiceTypePools {
         scheduledExecutorService.schedule(new CpuTask("CpuTaskSchule"), 5, TimeUnit.SECONDS);
         // Task to run repeatedly every 6 seconds
         scheduledExecutorService.scheduleAtFixedRate(new CpuTask("CpuTaskScheduleAtFixedRate"), 10, 6, TimeUnit.SECONDS);
-        // Task to run repeatedly 6 seconds after previous task completes
-        scheduledExecutorService.scheduleWithFixedDelay(new CpuTask("CpuTaskScheduleWithFixedDelay"), 10, 6, TimeUnit.SECONDS);
+        // Task to run repeatedly 6 seconds after previous task completes, for example ScheduledTask
+        scheduledExecutorService.scheduleWithFixedDelay(new ScheduledTask("CpuTaskScheduleWithFixedDelay"), 10, 6, TimeUnit.SECONDS);
 
-        scheduledExecutorService.shutdown();
+        //scheduledExecutorService.shutdown();
     }
 }
