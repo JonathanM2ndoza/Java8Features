@@ -1,4 +1,4 @@
-package com.jmendoza.concurrency.executors;
+package com.jmendoza.concurrency.executors.rejectedexecution;
 
 public class RejectedTask implements Runnable {
 

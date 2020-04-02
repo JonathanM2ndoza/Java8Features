@@ -1,4 +1,4 @@
-package com.jmendoza.concurrency.executors;
+package com.jmendoza.concurrency.executors.rejectedexecution;
 
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
