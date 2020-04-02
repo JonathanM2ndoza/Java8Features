@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class RejectedExecutionHandlerTest {
 
-     public static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
-     public static final ThreadPoolExecutor alternateExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    public static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    public static final ThreadPoolExecutor alternateExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
 
     public static void main(String[] args) {
 
@@ -23,6 +23,7 @@ public class RejectedExecutionHandlerTest {
             if (i == 6)
                 executor.shutdown();// The executor is terminated intentionally to check the RejectedExecutionHandler
         }
+
         executor.shutdown();
         while (!executor.isTerminated()) {
             //Waiting for the termination of executor

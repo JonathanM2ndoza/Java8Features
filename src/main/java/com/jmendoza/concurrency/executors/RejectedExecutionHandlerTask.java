@@ -8,8 +8,8 @@ public class RejectedExecutionHandlerTask implements RejectedExecutionHandler {
     public void rejectedExecution(Runnable task, ThreadPoolExecutor executor) {
         System.out.println(task.toString() + " is Rejected");
         System.out.println(task.toString() + " Retrying to Execute");
+
         try {
-            //Re-executing with alternateExecutor
             RejectedExecutionHandlerTest.alternateExecutor.execute(task);
             System.out.println(task.toString() + " Execution Started");
         } catch (Exception e) {
