@@ -12,8 +12,8 @@ public class CallableTaskTest {
         for (int i = 0; i < 50; i++) {
             Future<Integer> integerFuture = executorService.submit(new CallableTask());
             // Blocking Main Thread
-            Integer result = integerFuture.get();
-            System.out.println(result);
+            /*Integer result = integerFuture.get();
+            System.out.println(result);*/
             futureList.add(integerFuture);
         }
 
