@@ -44,6 +44,5 @@ Reference: Book, Java 8 in Action: Lambdas, streams, and
 - Streams and Method References
 - Collections
 - Generics Wildcard
-- Concurrency
-- Asynchronous Programming
+- Concurrency and Asynchronous Programming
 
