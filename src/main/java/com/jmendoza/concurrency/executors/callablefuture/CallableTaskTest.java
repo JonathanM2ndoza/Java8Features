@@ -6,14 +6,14 @@ import java.util.concurrent.*;
 
 public class CallableTaskTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         List<Future> futureList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
             Future<Integer> integerFuture = executorService.submit(new CallableTask());
             // Blocking Main Thread
-            /*Integer result = integerFuture.get();
-            System.out.println(result);*/
+            Integer result = integerFuture.get();
+            System.out.println(result);
             futureList.add(integerFuture);
         }
 
