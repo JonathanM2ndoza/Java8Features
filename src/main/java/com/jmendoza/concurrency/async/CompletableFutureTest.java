@@ -12,11 +12,13 @@ public class CompletableFutureTest {
     public static void main(String[] args) {
 
         for (int i = 0; i < 20; i++) {
-            CompletableFuture.supplyAsync(() -> getOrder())
-                    .thenApply(order -> enrich(order))
-                    .thenApply(order -> payment(order))
-                    .thenAccept(order -> dispatch(order));
+            CompletableFuture.supplyAsync(CompletableFutureTest::getOrder)
+                    .thenApply(CompletableFutureTest::enrich)
+                    .thenApply(CompletableFutureTest::payment)
+                    .thenAccept(CompletableFutureTest::dispatch);
         }
+
+        System.out.println("================== Not blocking Main Thread ==================");
     }
 
     public static Order getOrder() {
@@ -28,7 +30,7 @@ public class CompletableFutureTest {
     public static Order enrich(Order order) {
 
         List<String> items = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             items.add(RandomStringUtils.randomAlphanumeric(10));
         }
         order.setItems(items);
