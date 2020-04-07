@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantLockTest {
 
-    private static ReentrantLock reentrantLock = new ReentrantLock(false);
+    private static ReentrantLock reentrantLock = new ReentrantLock(true);
     private static int counter = 0;
     private static ExecutorService executorService = Executors.newFixedThreadPool(20);
 
