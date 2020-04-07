@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantLockTest {
 
-    private static ReentrantLock reentrantLock = new ReentrantLock();
+    private static ReentrantLock reentrantLock = new ReentrantLock(false);
     private static int counter = 0;
     private static ExecutorService executorService = Executors.newFixedThreadPool(20);
 
@@ -14,13 +14,14 @@ public class ReentrantLockTest {
 
         executorService.execute(() -> {
             for (int i = 0; i < 1000; i++) {
-                Thread thread1 = new Thread(() -> accessResource());
+                Thread thread1 = new Thread(ReentrantLockTest::accessResource);
                 thread1.start();
             }
         });
         executorService.shutdown();
     }
 
+    // Same as synchronized but with more features
     private static void accessResource() {
         reentrantLock.lock();
         try {
@@ -31,4 +32,10 @@ public class ReentrantLockTest {
         }
     }
 
+    private void accessResource2() {
+        synchronized (this) {
+            System.out.println("Thread:" + Thread.currentThread().getName());
+            System.out.println("Counter: " + counter++);
+        }
+    }
 }
